@@ -105,6 +105,41 @@ def generator_obj():
         print(index)
 
 
+def _turple():
+    t = ('azoux', 19, ('azoux2', 1919), ['list1'])
+    print(t[3][0])
+    list_1 = list(t)
+    print(list_1)
+
+
+def _set():
+    set1 = {1, 2, 3, 1}
+    print(set1)
+    set2 = set(range(1, 10))
+
+    set2.update([10])  # update只能用 [] 来添加
+    print(set2)
+
+    # 集合的并、交、补、对称差
+    print(set1 & set2)
+    print(set1 | set2)
+    print(set2 - set1)
+    print(set1 ^ set2)
+
+    print(set2 <= set1)
+
+
+def _dict():
+    # 字典
+    scores = {
+        'name': 'azoux',
+        'age': 19,
+    }
+    print(scores['name'])
+    item2 = dict(zip(['a', 2, 'c', 'd'], [1, 2, 3, 5]))
+    print(item2)
+
+
 def main():
     # print(r'\/\/\/\/\/He;;p/n')  # 加上r后面的/就都不会转义
     # print('\n\\Hello world\\\n')
@@ -134,7 +169,16 @@ def main():
     # sort()
 
     # 生成式和生成器
-    generator_obj()
+    # generator_obj()
+
+    # 元组
+    # _turple()
+
+    # 集合
+    # _set()
+
+    # 字典
+    _dict()
 
     pass
 
